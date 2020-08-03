@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.15)
+
+project(plugins LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_AUTOMOC ON)
+
+if (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
+
+set(PLUGINS_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/application/${CMAKE_BUILD_TYPE}/imports/qml)
+message("Plugins Install Prefix: ${PLUGINS_INSTALL_PREFIX}")
+
+add_subdirectory(c2000_app)
+add_subdirectory(c2000_instrument)
+add_subdirectory(c2000_protocols)
+add_subdirectory(c2000_translation)

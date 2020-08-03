@@ -1,0 +1,4 @@
+set PATH=C:\QT\5.15.0\msvc2019_64\bin;%PATH%
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
+cd /D C:\Visual Studio Solutions\PCR_Touch
+devenv
